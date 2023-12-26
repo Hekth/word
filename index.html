@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon">
+    <script src="./js/tutorial.js" defer></script>
+    <script type="module" src="./js/script.js" defer></script>
+    <title>Word</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="img/Logo.svg" alt="logo da página">
+    </header>
+    
+    <main class="principal">
+        <span class="aviso">Preencha todas as letras!</span>
+        <section class="principal__container-tabela">
+            <table class="tabela">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+        <section class="principal__teclado">
+            <div class="teclado">
+                <button type="button" value="q">Q</button>
+                <button type="button" value="w">W</button>
+                <button type="button" value="e">E</button>
+                <button type="button" value="r">R</button>
+                <button type="button" value="t">T</button>
+                <button type="button" value="y">Y</button>
+                <button type="button" value="u">U</button>
+                <button type="button" value="i">I</button>
+                <button type="button" value="o">O</button>
+                <button type="button" value="p">P</button>
+            </div>
+            <div class="teclado">
+                <button type="button" value="a">A</button>
+                <button type="button" value="s">S</button>
+                <button type="button" value="d">D</button>
+                <button type="button" value="f">F</button>
+                <button type="button" value="g">G</button>
+                <button type="button" value="h">H</button>
+                <button type="button" value="j">J</button>
+                <button type="button" value="k">K</button>
+                <button type="button" value="l">L</button>
+            </div>
+            <div class="teclado">
+                <button type="button" value="enter">ENTER</button>
+                <button type="button" value="z">Z</button>
+                <button type="button" value="x">X</button>
+                <button type="button" value="c">C</button>
+                <button type="button" value="v">V</button>
+                <button type="button" value="b">B</button>
+                <button type="button" value="n">N</button>
+                <button type="button" value="m">M</button>
+                <button type="button" value="del"><img src="img/apagar.svg" alt="ícone para apagar"></button>
+            </div>
+        </section>
+        <button type="button" class="jogar-novamente">Jogar novamente</button>
+    </main>
+    <footer>
+        <p>Feitor por Heitor da Costa Cândido </p>
+        <a href="https://www.linkedin.com/in/heitor-candido/" target="_blank" rel="external">
+            <img src="img/linkedin.png" alt="ícone do linkedin">
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Hekth" target="_blank" rel="external">
+            <img src="img/github.png" alt="Ícone do Github">
+            <span>Github</span>
+        </a>
+    </footer>
+    <dialog>
+        <div class="tutorial-container">
+            <h1 class="tutorial__titulo">Como jogar</h1>
+            <p>Bem vindo ao Word!</p>
+            <p>
+                Word é um jogo baseado no famoso jogo Wordle em que você precisa acertar uma palavra aleatória de 5 letras em 6 tentativas.
+                Esta versão em questão, funciona apenas com vocábulos da língua portuguesa!
+            </p>
+            <div class="btn-container">
+                <button class="btn__pular">Pular tutorial</button>
+                <button class="btn__proximo">Próximo</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog>
+        <div class="tutorial-container">
+            <h1 class="tutorial__titulo">Como jogar</h1>
+            <p>A cada tentativa, a cor das células mudará, mostrando o quão próximo o seu chute está da palavra!</p>
+            <img class="tutorial__img" src="img/tutorial2.png" alt="tutorial">
+
+            <div class="btn-container">
+                <button class="btn__pular">Pular tutorial</button>
+                <button class="btn__proximo">Próximo</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog>
+        <div class="tutorial-container">
+            <h1 class="tutorial__titulo">Como jogar</h1>
+            <p>Significado das cores: </p>
+            <div class="container__exemplo">
+                <div class="tutorial__exemplo cinza-tutorial">P</div>
+                <p>Letra não existe na palavra.</p>
+            </div>
+            
+            <div class="container__exemplo">
+                <div class="tutorial__exemplo amarelo-tutorial">P</div>
+                <p>Letra existe na palavra, porém posição errada.</p>
+            </div>
+            <div class="container__exemplo">
+                <div class="tutorial__exemplo verde-tutorial">P</div>
+                <p>Letra existe na palavra.</p>
+            </div>
+            <button class="btn-jogar">Jogar</button>
+        </div>
+    </dialog>
+</body>
+</html>
