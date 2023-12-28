@@ -6,10 +6,10 @@ const jogarNovamenteBtn = document.querySelector('.jogar-novamente');
 
 async function main() {
     const palavras = await listaDePalavras();
-    const palavraAleatoria = geraPalavraAleatoria();
+    let palavraAleatoria = geraPalavraAleatoria();
     let chutes = [];
     let todosOsChutes = [];
-
+    console.log(palavraAleatoria);
     botoes.forEach((botao) => {
         botao.addEventListener('click', () => {
             if (botao.value === 'enter') {
@@ -32,7 +32,7 @@ async function main() {
                 }
 
                 if (todosOsChutes.concat(chutes).length === 30) {
-                    mostraAviso('aviso vermelho', `Que pena, você perdeu! A palavra era: ${palavraAleatoria}`);
+                    mostraAviso('aviso vermelho', `Que pena, você perdeu! A palavra era: ${palavraAleatoria.toUpperCase()}`);
                     comparaChuteComPalavra();
                     desabilitaTeclado();
                     jogarNovamenteBtn.style.display = 'block';
@@ -57,7 +57,7 @@ async function main() {
         });
     });
     
-    jogarNovamenteBtn.addEventListener('click', () => location.reload());
+    jogarNovamenteBtn.addEventListener('click', () => resetaJogo());
 
     /* --------------------- FUNÇÕES USADAS ------------------ */
 
@@ -103,7 +103,7 @@ async function main() {
         botoes.forEach((botao) => celulas.forEach((celula) => {
             if (celula.hasAttribute('style')) {
                 if (botao.value === celula.innerText.toLowerCase()) {
-                    botao.disabled = celula.style.backgroundColor === 'var(--cinza-escuro)' ? true : false;
+                    // botao.disabled = celula.style.backgroundColor === 'var(--cinza-escuro)' ? true : false;
                     botao.style.backgroundColor = botao.style.backgroundColor !== 'var(--verde)' ? celula.style.backgroundColor : 'var(--verde)';
                 }
             }
@@ -117,10 +117,36 @@ async function main() {
         });
     }
 
+    function habilitaTeclado() {
+        botoes.forEach((botao) => {
+            botao.disabled = false;
+            botao.style.backgroundColor = 'var(--cinza)';
+        });
+    }
+
+    function limpaCelulas() {
+        celulas.forEach((celula) => {
+            celula.style.backgroundColor = '';
+            celula.innerText = '';
+        });
+    }
+
     function mostraAviso(classe, msg) {
         aviso.style.display = 'block';
         aviso.className = classe;
         aviso.innerText = msg;
+    }
+
+
+    function resetaJogo() {
+        palavraAleatoria = geraPalavraAleatoria();
+        console.log(palavraAleatoria);
+        chutes = [];
+        todosOsChutes = [];
+        habilitaTeclado();
+        limpaCelulas();
+        aviso.style.display = 'none';
+        jogarNovamenteBtn.style.display = 'none';
     }
 }
 

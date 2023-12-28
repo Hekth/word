@@ -53,6 +53,7 @@ body {
     padding: 0.5rem 1.25rem;
     border-radius: 10px;
     top: 150px;
+    text-align: center;
 }
 
 .verde {
@@ -237,6 +238,10 @@ dialog::backdrop {
 @media screen and (max-width: 500px) {
     .cabecalho {
         padding: 1rem;
+    }
+
+    .aviso {
+        width: 60%;
     }
 
     .tabela tr td {
