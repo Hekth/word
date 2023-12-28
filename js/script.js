@@ -9,7 +9,6 @@ async function main() {
     let palavraAleatoria = geraPalavraAleatoria();
     let chutes = [];
     let todosOsChutes = [];
-    console.log(palavraAleatoria);
     botoes.forEach((botao) => {
         botao.addEventListener('click', () => {
             if (botao.value === 'enter') {
@@ -140,7 +139,6 @@ async function main() {
 
     function resetaJogo() {
         palavraAleatoria = geraPalavraAleatoria();
-        console.log(palavraAleatoria);
         chutes = [];
         todosOsChutes = [];
         habilitaTeclado();
