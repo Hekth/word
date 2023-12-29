@@ -32,9 +32,30 @@ body {
 
 /* HEADER */
 .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 4.5rem;
     border-bottom: 1px solid var(--cinza-escuro);
 }
+
+.cabecalho__duvida {
+    font-size: 2rem;
+    font-family: monospace;
+    color: var(--branco);
+    cursor: pointer;
+    border: 2px solid var(--branco);
+    border-radius: 50%;
+    padding: 0.3rem 0.7rem;
+    transition: 200ms ease;
+}
+
+.cabecalho__duvida:hover {
+    background-color: var(--branco);
+    color: var(--cor-fundo);
+    
+}
+
 
 /* MAIN */
 .principal {
