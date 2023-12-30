@@ -186,7 +186,8 @@ footer a {
 
 /* DIALOG */
 dialog {
-    width: 40%;
+    width: 80vw;
+    max-width: 700px;
     background-color: var(--cor-fundo);
     color: var(--branco);
     border: 1px solid var(--cinza-escuro);
@@ -198,6 +199,7 @@ dialog::backdrop {
 }
 
 .tutorial-container {
+    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -208,8 +210,13 @@ dialog::backdrop {
     font-size: 1.5rem;
 }
 
+.tutorial__texto {
+    line-height: 1.5rem;
+}
+
 .tutorial__img {
-    width: 250px;
+    width: 50%;
+    max-width: 250px;
 }
 
 .container__exemplo {
@@ -222,8 +229,8 @@ dialog::backdrop {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
     border: 1px solid var(--cinza-escuro);
     text-align: center;
     font-size: 2.25rem;
@@ -243,6 +250,11 @@ dialog::backdrop {
     background-color: var(--verde);
 }
 
+.btn-container {
+    display: flex;
+    gap: 1rem;
+}
+
 .btn-jogar, .btn-container button {
     background-color: var(--amarelo-vivo);
     font-family: var(--inter);
@@ -250,6 +262,8 @@ dialog::backdrop {
     font-size: 0.75rem;
     border: none;
     cursor: pointer;
+    width: 20%;
+    min-width: 100px;
 }
 
 .btn-container .btn__pular {
@@ -259,6 +273,15 @@ dialog::backdrop {
 @media screen and (max-width: 500px) {
     .cabecalho {
         padding: 1rem;
+    }
+
+    .cabecalho img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cabecalho__duvida {
+        font-size: 1.5rem;
     }
 
     .aviso {
@@ -281,6 +304,22 @@ dialog::backdrop {
 
     .icone-del {
         width: 16px;
+    }
+
+    .dialog {
+        width: 100%;
+    }
+
+    .tutorial__texto {
+        font-size: 0.9rem;
+    }
+
+    .tutorial__titulo {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
 
