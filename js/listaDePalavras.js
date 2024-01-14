@@ -1,8 +1,7 @@
-async function listaDePalavras() {
-    const req = await fetch('../palavras/dados.json');
-    const json = await req.json();
-    
-    const arrayIterator = Object.values(json);
+import dados from "../palavras/dados.json" assert { type: "json" };
+
+function listaDePalavras() {
+    const arrayIterator = Object.values(dados);
     return arrayIterator;
 }
 
