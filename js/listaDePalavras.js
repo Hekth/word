@@ -1,4 +1,4 @@
-import dados from "../palavras/dados.json" assert { type: "json" };
+import dados from "../palavras/dados.json" with { type: "json" };
 
 function listaDePalavras() {
     const arrayIterator = Object.values(dados);
